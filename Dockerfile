@@ -9,7 +9,7 @@ COPY package*.json ./
 COPY index.js .
 
 # Instalar dependencias
-RUN npm install
+RUN npm install --no-package-lock
 
 # Exponer el puerto de la aplicación
 EXPOSE 3000
