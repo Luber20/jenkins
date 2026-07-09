@@ -111,6 +111,9 @@ app.get('/users/:id', (req, res) => {
     res.json({ user });
 });
 
+// Exportar la app para los tests
+module.exports = app;
+
 // Iniciar el servidor solo si no estamos en modo de prueba
 if (require.main === module) {
     app.listen(PORT, '0.0.0.0', () => {
