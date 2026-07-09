@@ -10,7 +10,7 @@ pipeline {
         stage('Pruebas Automáticas') {
             steps {
                 // Instala las herramientas de prueba en Jenkins
-                sh 'npm install'
+                sh 'npm install --no-package-lock'
                 // Ejecuta las pruebas
                 sh 'npm test'
             }
