@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         nodejs "Node25" 
-        docker 'Dockertool'  
+        dockerTool 'Dockertool'  // <-- Aquí está la corrección (dockerTool)
     }
 
     stages {
