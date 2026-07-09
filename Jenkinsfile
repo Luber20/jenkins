@@ -2,11 +2,20 @@ pipeline {
     agent any
 
     tools {
-        nodejs "Node25" // Configura una instalación de Node.js en Jenkins
-        dockerTool 'Dockertool'  // Cambia el nombre de la herramienta según tu configuración en Jenkins
+        nodejs "Node25" 
+        docker 'Dockertool'  
     }
 
     stages {
+        stage('Pruebas Automáticas') {
+            steps {
+                // Instala las herramientas de prueba en Jenkins
+                sh 'npm install'
+                // Ejecuta las pruebas
+                sh 'npm test'
+            }
+        }
+
         stage('Construir Imagen Docker') {
             steps {
                 sh 'docker build -t hola-mundo-node:latest .'
