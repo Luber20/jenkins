@@ -28,7 +28,7 @@ const writeDatabase = (data) => {
 // CRUD de usuarios
 app.get('/', (req, res) => {
     const msg = {
-        message: 'Ejecutando Servidor',
+        message: 'Demostracion',
         status: 200
     }
     res.json(msg);
