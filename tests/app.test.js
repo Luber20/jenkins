@@ -16,7 +16,7 @@ describe('API de usuarios', () => {
   it('Debe responder el endpoint raíz', async () => {
     const res = await request(app).get('/');
     expect(res.statusCode).toBe(200);
-    expect(res.body.message).toMatch(/Servidor en ejecucion/i);
+    expect(res.body.message).toMatch(/Ejecutando Servidor/i);
   });
 
   it('Debe crear un nuevo usuario', async () => {
